@@ -18,8 +18,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
 SECRET_KEY = 'django-insecure-cl_20==(ncwy7(7-j7)jr$@kg1&#eq1tyb)kc+tdd@hz4ozg)k'
-DEBUG = True
-ALLOWED_HOSTS = ['192.168.95.204', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['*']
+DEBUG = False
 
 # Application definition
 INSTALLED_APPS = [
@@ -42,7 +42,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
+
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 CHANNEL_LAYERS = {
     'default': {
@@ -59,7 +62,6 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:8000",
     "http://192.168.95.204:8000",
 ]
-
 
 CORS_ALLOW_HEADERS = list(default_headers) + [
     "content-type",
