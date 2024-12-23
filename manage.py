@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #!/usr/bin/env python3.10
+=======
+#!/usr/bin/env python
+>>>>>>> 96823c6827b23b7a7529a75e690ef3a64981c7b8
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
@@ -19,4 +23,8 @@ def main():
 
 
 if __name__ == '__main__':
+<<<<<<< HEAD
     main()
+=======
+    main()
+>>>>>>> 96823c6827b23b7a7529a75e690ef3a64981c7b8
